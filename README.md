@@ -20,13 +20,16 @@ describe('login with valid credentials on "Amazon"', () => {
 it('should log in on "Amazon"', () => {  
 &nbsp; browser.url('https://www.amazon.com');   
 &nbsp; const button = $('//*[@id="nav-link-accountList"]/span[1]');  
-&nbsp; button.click();     
+&nbsp; button.click();  
+
 &nbsp; const email = $('#ap_email');   
 &nbsp; email.setValue('raulcs@protonmail.com');   
-&nbsp; browser.keys('\uE007');   
+&nbsp; browser.keys('\uE007');
+
 &nbsp; const password = $('#ap_password');   
 &nbsp; password.setValue('111111');   
-&nbsp; browser.keys('\uE007');   
+&nbsp; browser.keys('\uE007'); 
+
 &nbsp; const title = browser.getTitle();   
 &nbsp; expect(browser).toHaveTitle(' Your Amazon.com');   
 &nbsp; })   

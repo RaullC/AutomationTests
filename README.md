@@ -42,7 +42,7 @@ describe('register new user on "Amazon"', () => {
 
 it('should create new user on "Amazon"', () => {   
 &nbsp; browser.url('https://www.amazon.com');   
-&nbsp;  const buttonAccount = $('//*[@id="nav-link-accountList"]/span[1]');   
+&nbsp; const buttonAccount = $('//*[@id="nav-link-accountList"]/span[1]');   
 &nbsp; buttonAccount.click();   
 
 &nbsp; const buttonCreateAccount = $('#createAccountSubmit');   
@@ -64,3 +64,25 @@ it('should create new user on "Amazon"', () => {
 &nbsp; submit.click(); //After that, a window opens where you have to enter a code received by email.   
 &nbsp; })     
 })   
+
+
+## Check title, search and button on Ebay.com
+
+describe('Ebay.de page', () => {   
+ 
+it('should check "Ebay" title', () => {   
+&nbsp; browser.url('https://www.ebay.com');   
+&nbsp; const title = browser.getTitle();   
+&nbsp; expect(browser).toHaveTitle('Electronics, Cars, Fashion, Collectibles & More | eBay');    
+&nbsp; })   
+
+it('should click on "Search" button', () => {     
+&nbsp; const button = $('#gh-btn');   
+&nbsp; button.click();   
+&nbsp; })   
+  
+it('should contain "Electronics" button', () =>{   
+&nbsp; const button = $('.ttl');   
+&nbsp; expect(button).isDisplayed;   
+&nbsp; })   
+})    

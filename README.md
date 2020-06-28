@@ -52,7 +52,7 @@ it('should create new user on "Amazon"', () => {
 &nbsp; name.setValue('JackTestA');   
 
 &nbsp; const email = $('#ap_email');   
-&nbsp; email.setValue('raulcs@protonmail.com');   
+&nbsp; email.setValue('raul@protonmail.com');   
 
 &nbsp; const password = $('#ap_password');   
 &nbsp; password.setValue('1111111');  

@@ -34,3 +34,33 @@ it('should log in on "Amazon"', () => {
 &nbsp; expect(browser).toHaveTitle(' Your Amazon.com');   
 &nbsp; })   
 })   
+
+
+## Create new user on Amazon.com
+
+describe('register new user on "Amazon"', () => {   
+
+it('should create new user on "Amazon"', () => {   
+&nbsp;browser.url('https://www.amazon.com');   
+&nbsp;const buttonAccount = $('//*[@id="nav-link-accountList"]/span[1]');   
+&nbsp;buttonAccount.click();   
+
+&nbsp;const buttonCreateAccount = $('#createAccountSubmit');   
+&nbsp;buttonCreateAccount.click();   
+
+&nbsp;const name =$('#ap_customer_name');   
+&nbsp;name.setValue('JackTestA');   
+
+&nbsp;const email = $('#ap_email');   
+&nbsp;email.setValue('raulcs@protonmail.com');   
+
+&nbsp;const password = $('#ap_password');   
+&nbsp;password.setValue('1111111');  
+
+&nbsp;const repassword = $('#ap_password_check');   
+&nbsp;repassword.setValue('111111');   
+
+&nbsp;const submit = $('#continue');   
+&nbsp;submit.click(); //After that, a window opens where you have to enter a code received by email.   
+&nbsp;})     
+})   
